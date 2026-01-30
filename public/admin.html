@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin — Staff Tracker</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    .form-row{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+    .form-row label{flex:1}
+    .small{font-size:0.9rem;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Admin — Staff Tracker</h1>
+      <nav style="margin-top:8px">
+        <a href="/" class="link">Home</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Add Employee</h2>
+        <p class="small">Enter the admin code and new employee details. Passcodes must be unique.</p>
+
+        <div class="form-row">
+          <label>Admin Code
+            <input id="adminCode" type="text" />
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>Name
+            <input id="empName" type="text" />
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>Passcode
+            <input id="empPass" type="text" />
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>Pay Rate (hourly)
+            <input id="empRate" type="number" step="0.01" />
+          </label>
+        </div>
+
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <button id="add-btn" class="primary">Add Employee</button>
+          <button id="clear-btn" class="link">Clear</button>
+        </div>
+
+        <p id="result" class="muted" style="margin-top:12px"></p>
+      </section>
+    </main>
+
+    <footer>
+      <small class="muted">Admin actions are protected by a simple code (0123).</small>
+    </footer>
+  </div>
+  <script src="/admin.js"></script>
+</body>
+</html>

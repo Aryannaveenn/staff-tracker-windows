@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Staff Tracker</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Staff Tracker</h1>
+      <nav style="margin-top:8px">
+        <a href="/admin.html" class="link">Admin</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="login-section" class="card">
+        <h2>Employee Login</h2>
+        <label>Passcode
+          <input id="passcode" type="password" inputmode="numeric" maxlength="10" />
+        </label>
+        <button id="login-btn">Login</button>
+        <p id="login-msg" class="muted"></p>
+      </section>
+
+      <section id="clock-section" class="card hidden">
+        <h2 id="welcome"></h2>
+        <div class="status">
+          <p>Last: <span id="last-status">—</span></p>
+        </div>
+        <div class="buttons">
+          <button id="clock-in" class="primary">Clock In</button>
+          <button id="clock-out" class="primary">Clock Out</button>
+        </div>
+        <div style="margin-top:12px">
+          <button id="view-history" class="primary">View History</button>
+        </div>
+        <section id="history-section" class="card hidden" style="margin-top:12px">
+          <h3>History</h3>
+          <div id="history-list"></div>
+        </section>
+        <p id="action-msg" class="muted"></p>
+        <button id="logout" class="link">Log out</button>
+      </section>
+    </main>
+
+    <footer>
+      <p class="muted">Built for your business.</p>
+    </footer>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
